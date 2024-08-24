@@ -9,4 +9,11 @@ import { Component } from '@angular/core';
 })
 export class DataBindingComponentComponent {
 
+  courseName: String = "Engineering";
+
+  courseNumber: number = 12345;
+
+  myClassName: string = "bg-danger";
+
+  inputType: string = "Checkbox";
 }
