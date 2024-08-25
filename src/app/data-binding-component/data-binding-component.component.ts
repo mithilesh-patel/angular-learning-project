@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal, Signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -17,6 +17,7 @@ export class DataBindingComponentComponent {
 
   inputType: string = "Checkbox";
 
+  fname= signal("Mithilesh");
 
   constructor(){
 
@@ -29,5 +30,6 @@ export class DataBindingComponentComponent {
 
   changeLabel(){
     this.courseName = "BSC";
+    this.fname.set("Microsoft");
   }
 }

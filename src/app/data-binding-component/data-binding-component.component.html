@@ -27,7 +27,8 @@
 
 <div>
 
-    <h1>2 way data binding</h1>
+    <h3>2 way data binding</h3>
+    <p>{{fname()}}</p>
     <input type="text" name="" id="" [(ngModel)]="courseName">
     <select name="" id="">
         <option value="">Select One</option>
@@ -35,4 +36,7 @@
         <option value="Two">Two</option>
         <option value="Three">Three</option>
     </select>
+    <br>
+    <h3>Using Signal</h3>
+    <input type="text" value="{{fname()}}">
 </div>
