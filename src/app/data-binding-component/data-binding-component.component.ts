@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-data-binding-component',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './data-binding-component.component.html',
-  styleUrl: './data-binding-component.component.css'
 })
 export class DataBindingComponentComponent {
 
@@ -16,4 +16,18 @@ export class DataBindingComponentComponent {
   myClassName: string = "bg-danger";
 
   inputType: string = "Checkbox";
+
+
+  constructor(){
+
+  }
+
+
+  showAlert(msg: string){
+    alert(msg)
+  }
+
+  changeLabel(){
+    this.courseName = "BSC";
+  }
 }
