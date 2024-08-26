@@ -1,0 +1,42 @@
+<p>data-binding-component works!</p>
+<div class="row m-1">
+    <h1>This is using Interpolation (From .ts to .html)</h1>
+    <div class="col-6">
+        <h3 class="bg-success">{{ courseNumber}}</h3>
+        <input type="{{inputType}}" name="Check" id="Check">
+        <label for="Check">Checkbox Label</label>
+        
+        <label for="Name">Input Fname</label>
+        <input type="text" name="Name" id="Name" [value]="courseName" >
+        
+
+    </div>
+    <div class="col-6">
+        <h3 class="bg-warning">{{ courseName}}</h3>
+    </div>
+
+</div>
+<div class="col-6">
+    <h3>This is using Property Binding</h3>
+    <h3 [class]="myClassName">I am Danger</h3>
+    <button class="btn-success" (click)="showAlert('You have clicked the Success button')">Click Me</button>
+    <button class="btn-warning" (click)="showAlert('You have clicked the Warning button')">Click Me</button>
+    <button class="btn-warning" (click)="changeLabel()">Change Label</button>
+
+</div>
+
+<div>
+
+    <h3>2 way data binding</h3>
+    <p>{{fname()}}</p>
+    <input type="text" name="" id="" [(ngModel)]="courseName">
+    <select name="" id="">
+        <option value="">Select One</option>
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+    </select>
+    <br>
+    <h3>Using Signal</h3>
+    <input type="text" value="{{fname()}}">
+</div>
