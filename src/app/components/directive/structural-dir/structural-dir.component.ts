@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './structural-dir.component.css'
 })
 export class StructuralDirComponent {
-
+  isDiv1Visible : boolean = false;
 }
