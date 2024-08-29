@@ -6,8 +6,20 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './structural-dir.component.html',
-  styleUrl: './structural-dir.component.css'
+  styleUrl: './structural-dir.component.css',
 })
 export class StructuralDirComponent {
-  isDiv1Visible : boolean = false;
+  isDiv1Visible: boolean = true;
+  isDiv2Visible: boolean = true;
+
+  showDiv1() {
+    this.isDiv1Visible = true;
+  }
+  hideDiv1() {
+    this.isDiv1Visible = false;
+  }
+
+  toggleDiv2() {
+    this.isDiv2Visible = !this.isDiv2Visible;
+  }
 }
