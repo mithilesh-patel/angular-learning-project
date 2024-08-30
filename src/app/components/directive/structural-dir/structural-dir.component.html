@@ -16,7 +16,7 @@
   </div>
 
   <div class="col-3">
-    <div class="bg-secondary p-3 text-center">
+    <div *ngIf="inputValue1 == inputValue2" class="bg-secondary p-3 text-center">
       <h4>Div-3</h4>
     </div>
   </div>
@@ -37,8 +37,8 @@
     <button (click)="toggleDiv2()" class="btn btn-success m-2">Toggle</button>
   </div>
   <div class="p3 text-center col-3">
-    <input type="text" name="Number1" id="Number1" placeholder="Number1" />
-    <input type="text" name="Number2" id="Number2" placeholder="Number2" />
+    <input type="text" name="Number1" [(ngModel)]="inputValue1" id="Number1" placeholder="Number1" />
+    <input type="text" name="Number2" [(ngModel)]="inputValue2" id="Number2" placeholder="Number2" />
   </div>
   <div class="p3 text-center col-3">
     <input type="checkbox" name="" id="" />
