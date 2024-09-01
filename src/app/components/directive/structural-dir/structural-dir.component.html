@@ -23,7 +23,7 @@
 
   <div class="col-3">
     <div class="bg-primary p-3 text-center">
-      <h4 *ngIf="subject == 'Hindi'">Div-4</h4>
+      <h4 *ngIf="subject == 'Hindi' ||  checkboxIsActive==true">Div-4</h4>
     </div>
   </div>
 </div>
@@ -41,7 +41,7 @@
     <input type="text" name="Number2" [(ngModel)]="inputValue2" id="Number2" placeholder="Number2" />
   </div>
   <div class="p3 text-center col-3" >
-    <input type="checkbox" name="" id="" />
+    <input type="checkbox" name="" id="" [(ngModel)]="checkboxIsActive"/>
     <select name="subject" id="subject" [(ngModel)]="subject">
       <option value="">Select option</option>
       <option value="Hindi">Hindi</option>

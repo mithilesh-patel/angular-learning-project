@@ -18,6 +18,8 @@ export class StructuralDirComponent {
 
   subject: string = '';
 
+  checkboxIsActive: boolean = false;
+
 
   showDiv1() {
     this.isDiv1Visible = true;
@@ -30,5 +32,6 @@ export class StructuralDirComponent {
   toggleDiv2() {
     this.isDiv2Visible = !this.isDiv2Visible;
   }
+  
   
 }
