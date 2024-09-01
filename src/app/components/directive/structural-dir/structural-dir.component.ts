@@ -13,12 +13,16 @@ export class StructuralDirComponent {
   isDiv1Visible: boolean = true;
   isDiv2Visible: boolean = true;
 
-  inputValue1 : string ='';
-  inputValue2 : string ='';
+  inputValue1: string = '';
+  inputValue2: string = '';
+
+  subject: string = '';
+
 
   showDiv1() {
     this.isDiv1Visible = true;
   }
+  
   hideDiv1() {
     this.isDiv1Visible = false;
   }
@@ -26,7 +30,5 @@ export class StructuralDirComponent {
   toggleDiv2() {
     this.isDiv2Visible = !this.isDiv2Visible;
   }
-
-
-
+  
 }
