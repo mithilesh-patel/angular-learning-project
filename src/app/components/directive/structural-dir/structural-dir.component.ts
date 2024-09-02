@@ -20,6 +20,8 @@ export class StructuralDirComponent {
 
   checkboxIsActive: boolean = false;
 
+  cityArray : string []=['Mumbai', 'Bangaluru', 'Chennai', 'Delhi'];
+
 
   showDiv1() {
     this.isDiv1Visible = true;

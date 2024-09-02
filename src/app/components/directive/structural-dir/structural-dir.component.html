@@ -16,14 +16,17 @@
   </div>
 
   <div class="col-3">
-    <div *ngIf="inputValue1 == inputValue2" class="bg-secondary p-3 text-center">
+    <div
+      *ngIf="inputValue1 == inputValue2"
+      class="bg-secondary p-3 text-center"
+    >
       <h4>Div-3</h4>
     </div>
   </div>
 
   <div class="col-3">
     <div class="bg-primary p-3 text-center">
-      <h4 *ngIf="subject == 'Hindi' ||  checkboxIsActive==true">Div-4</h4>
+      <h4 *ngIf="subject == 'Hindi' || checkboxIsActive == true">Div-4</h4>
     </div>
   </div>
 </div>
@@ -37,11 +40,23 @@
     <button (click)="toggleDiv2()" class="btn btn-success m-2">Toggle</button>
   </div>
   <div class="p3 text-center col-3">
-    <input type="text" name="Number1" [(ngModel)]="inputValue1" id="Number1" placeholder="Number1" />
-    <input type="text" name="Number2" [(ngModel)]="inputValue2" id="Number2" placeholder="Number2" />
+    <input
+      type="text"
+      name="Number1"
+      [(ngModel)]="inputValue1"
+      id="Number1"
+      placeholder="Number1"
+    />
+    <input
+      type="text"
+      name="Number2"
+      [(ngModel)]="inputValue2"
+      id="Number2"
+      placeholder="Number2"
+    />
   </div>
-  <div class="p3 text-center col-3" >
-    <input type="checkbox" name="" id="" [(ngModel)]="checkboxIsActive"/>
+  <div class="p3 text-center col-3">
+    <input type="checkbox" name="" id="" [(ngModel)]="checkboxIsActive" />
     <select name="subject" id="subject" [(ngModel)]="subject">
       <option value="">Select option</option>
       <option value="Hindi">Hindi</option>
@@ -50,4 +65,15 @@
       <option value="Chemistry">Chemistry</option>
     </select>
   </div>
+</div>
+
+<div class="row">
+  <div class="row-3">
+    <ul>
+      <li *ngFor="let city of cityArray">{{city}}</li>
+    </ul>
+  </div>
+  <div class="row-3"></div>
+  <div class="row-3"></div>
+  <div class="row-3"></div>
 </div>
