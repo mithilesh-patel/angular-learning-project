@@ -4,7 +4,7 @@
   
   <div class="row pt-3">
     <div class="col-3">
-      <div class="bg-danger p-3 text-center">
+      <div class="p-3 text-center" [ngClass]="div1bgColor">
         <h4>Div-1</h4>
       </div>
     </div>
@@ -30,8 +30,8 @@
   
   <div class="row pt-3">
     <div class="p3 text-center col-3">
-      <button class="btn m-2 btn-danger">Hide</button>
-      <button class="btn m-2 btn-primary">Show</button>
+      <button class="btn m-2 btn-danger" (click)="changeToDanger()" >Turn Red</button>
+      <button class="btn m-2 btn-warning" (click)="changeToYellow()">Turn Yellow</button>
     </div>
     <div class="p3 text-center col-3">
       <button class="btn btn-success m-2">Toggle</button>
