@@ -4,21 +4,18 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-attribute-directive',
   standalone: true,
-  imports: [CommonModule ],
+  imports: [CommonModule],
   templateUrl: './attribute-directive.component.html',
-  styleUrl: './attribute-directive.component.css'
+  styleUrl: './attribute-directive.component.css',
 })
 export class AttributeDirectiveComponent {
-
-  div1bgColor:string = "bg-primary";
+  div1bgColor: string = 'bg-primary';
 
   changeToDanger() {
-    this.div1bgColor="bg-danger";
+    this.div1bgColor = 'bg-danger';
   }
-  
-  changeToYellow(){
-    this.div1bgColor="bg-warning";
 
+  changeToYellow() {
+    this.div1bgColor = 'bg-warning';
   }
 }
-
