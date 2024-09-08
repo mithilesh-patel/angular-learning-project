@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 })
 export class AttributeDirectiveComponent {
   div1bgColor: string = 'bg-primary';
-  isDiv2Active: string = '';
+  isbgActive: boolean = true;
 
   changeToDanger() {
     this.div1bgColor = 'bg-danger';
@@ -19,8 +19,12 @@ export class AttributeDirectiveComponent {
   changeToYellow() {
     this.div1bgColor = 'bg-warning';
   }
+
+  removeYellow(){
+    this.div1bgColor="";
+  }
   
   toggleGreen(){
-    this.div1bgColor = 'bg-success';
+    this.isbgActive = !this.isbgActive;
   }
 }

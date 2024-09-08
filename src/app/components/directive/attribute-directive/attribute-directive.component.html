@@ -10,7 +10,7 @@
   </div>
 
   <div class="col-3">
-    <div class="p-3 text-center" [ngClass]="div2bgColor">
+    <div class="p-3 text-center" [ngClass]="isbgActive ==true ? 'bg-success' : ''">
       <h4>Div-2</h4>
     </div>
   </div>
@@ -36,9 +36,12 @@
     <button class="btn m-2 btn-warning" (click)="changeToYellow()">
       Turn Yellow
     </button>
+    <button class="btn m-2 bg-white" (click)="removeYellow()">
+      Remove Color
+    </button>
   </div>
   <div class="p3 text-center col-3">
-    <button class="btn btn-success m-2">Toggle</button>
+    <button class="btn btn-success m-2" (click)="toggleGreen()">Toggle</button>
   </div>
   <div class="p3 text-center col-3">
     <input type="text" name="Number1" id="Number1" placeholder="Number1" />
