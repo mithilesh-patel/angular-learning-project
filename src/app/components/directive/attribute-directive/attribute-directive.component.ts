@@ -14,6 +14,8 @@ export class AttributeDirectiveComponent {
   isbgActive: boolean = true;
   inputValue1:string = '';
   inputValue2:string = '';
+  isCheckboxChecked: boolean=false;
+  selectBoxValue : string = '';
 
   changeToDanger() {
     this.div1bgColor = 'bg-danger';
@@ -30,7 +32,4 @@ export class AttributeDirectiveComponent {
   toggleGreen(){
     this.isbgActive = !this.isbgActive;
   }
-
-
-
 }

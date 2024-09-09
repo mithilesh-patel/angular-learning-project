@@ -22,7 +22,7 @@
   </div>
 
   <div class="col-3">
-    <div class="bg-primary p-3 text-center">
+    <div class="p-3 text-center" [ngClass]="isCheckboxChecked && selectBoxValue == 'Hindi' ? 'bg-success' : 'bg-danger'">
       <h4>Div-4</h4>
     </div>
   </div>
@@ -48,8 +48,9 @@
     <input type="text" name="Number2" id="Number2" [(ngModel)]="inputValue2" placeholder="Number2" />
   </div>
   <div class="p3 text-center col-3">
-    <input type="checkbox" name="" id="" />
-    <select name="subject" id="subject">
+    <input type="checkbox" name="" id="" [(ngModel)]="isCheckboxChecked"/>
+
+    <select name="subject" id="subject" [(ngModel)]="selectBoxValue">
       <option value="">Select option</option>
       <option value="Hindi">Hindi</option>
       <option value="English">English</option>
