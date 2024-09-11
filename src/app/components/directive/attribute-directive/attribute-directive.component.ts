@@ -18,12 +18,12 @@ export class AttributeDirectiveComponent {
   selectBoxValue : string = '';
 
   studentList: any[]=[
-    {id:1, name:"A", gender: "Male", city: "Mumbai", isActive: true},
-    {id:2, name:"B", gender: "Male", city: "Pune", isActive: false},
-    {id:3, name:"C", gender: "Female", city: "Raipur", isActive: false},
-    {id:4, name:"D", gender: "Male", city: "Indore", isActive: true},
-    {id:5, name:"E", gender: "Male", city: "Banaras", isActive: false},
-    {id:6, name:"F", gender: "Female", city: "Bangalore", isActive: false},
+    {id:1, name:"A", marks: 23,gender: "Male", city: "Mumbai", isActive: true},
+    {id:2, name:"B", marks: 51,gender: "Male", city: "Pune", isActive: false},
+    {id:3, name:"C", marks: 74,gender: "Female", city: "Raipur", isActive: false},
+    {id:4, name:"D", marks: 65,gender: "Male", city: "Indore", isActive: true},
+    {id:5, name:"E", marks: 67,gender: "Male", city: "Banaras", isActive: false},
+    {id:6, name:"F", marks: 12,gender: "Female", city: "Bangalore", isActive: false},
   ]
 
   changeToDanger() {
