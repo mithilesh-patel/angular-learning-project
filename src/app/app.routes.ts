@@ -4,6 +4,7 @@ import { DataBindingComponentComponent } from './components/data-binding-compone
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { StructuralDirComponent } from './components/directive/structural-dir/structural-dir.component';
 import { AttributeDirectiveComponent } from './components/directive/attribute-directive/attribute-directive.component';
+import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 
 export const routes: Routes = [
     //This is a route object
@@ -26,5 +27,9 @@ export const routes: Routes = [
   {
     path:'attribute-dir',
     component:AttributeDirectiveComponent
+  },
+  {
+    path:'controlflow-dir',
+    component:ControlFlowComponent
   }
 ];
