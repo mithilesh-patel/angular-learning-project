@@ -1,1 +1,103 @@
-<h1>ifelse works!</h1>
+<div class="m-2 p-2 bg-secondary text-white rounded">
+  <h1>Control Flow Statememts</h1>
+  <h3>Using &#64;if, &#64;else &#64;else if</h3>
+</div>
+
+<div class="row pt-3">
+  <div class="col-3">
+    @if(isDiv1Visible) {
+
+    <div class="bg-success p-3 text-center">
+      <h4>True Condition Div-1</h4>
+    </div>
+
+    }@else{
+
+    <div class="bg-warning p-3 text-center">
+      <h4>False condition Div-1</h4>
+    </div>
+
+    }
+  </div>
+
+  <div class="col-3">
+    @if (isDiv2Visible) {
+
+    <div class="bg-success p-3 text-center">
+      <h4>Div-2</h4>
+    </div>
+    }@else {
+    <div class="bg-warning p-3 text-center">
+      <h4>Div-2</h4>
+    </div>
+    }
+  </div>
+
+  <div class="col-3">
+    @if(inputValue1 == inputValue2){
+
+        <div class="bg-info p-3 text-center">
+            <h4>Div-3</h4>
+        </div>
+    }
+  </div>
+
+  <div class="col-3">
+    <div class="bg-primary p-3 text-center">
+      @if (subject=='Hindi') {
+
+      <h4>Hindi</h4>
+      }@else if (subject=='English') {
+
+      <h4>English</h4>
+      }@else if (subject=='Chemistry') {
+
+      <h4>Chemistry</h4>
+      }@else if (subject=='Maths') {
+
+      <h4>Maths</h4>
+      }@else {
+      <h4>Else condition subject</h4>
+      }
+    </div>
+  </div>
+</div>
+
+<div class="row pt-3">
+  <div class="p3 text-center col-3">
+    <button (click)="hideDiv1()" class="btn m-2 btn-danger">
+      Make it False
+    </button>
+    <button (click)="showDiv1()" class="btn m-2 btn-primary">
+      Make it True
+    </button>
+  </div>
+  <div class="p3 text-center col-3">
+    <button (click)="toggleDiv2()" class="btn btn-success m-2">Toggle</button>
+  </div>
+  <div class="p3 text-center col-3">
+    <input
+      type="text"
+      name="Number1"
+      [(ngModel)]="inputValue1"
+      id="Number1"
+      placeholder="Number1"
+    />
+    <input
+      type="text"
+      name="Number2"
+      [(ngModel)]="inputValue2"
+      id="Number2"
+      placeholder="Number2"
+    />
+  </div>
+  <div class="p3 text-center col-3">
+    <select name="subject" id="subject" [(ngModel)]="subject">
+      <option value="">Select option</option>
+      <option value="Hindi">Hindi</option>
+      <option value="English">English</option>
+      <option value="Maths">Maths</option>
+      <option value="Chemistry">Chemistry</option>
+    </select>
+  </div>
+</div>
