@@ -8,6 +8,7 @@ import { SwitchComponent } from './components/controlflow/switch/switch.componen
 import { IfelseComponent } from './components/controlflow/ifelse/ifelse.component';
 import { ForComponent } from './components/controlflow/for/for.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
+import { PipeComponent } from './components/pipe/pipe.component';
 
 export const routes: Routes = [
   //This is a route object 
@@ -46,5 +47,9 @@ export const routes: Routes = [
   {
     path: 'switch-component',
     component: SwitchComponent,
+  },
+  {
+    path: 'pipe-component',
+    component: PipeComponent,
   },
 ];
