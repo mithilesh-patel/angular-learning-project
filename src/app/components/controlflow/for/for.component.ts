@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-for',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './for.component.html',
   styleUrl: './for.component.css',
 })
 export class ForComponent {
+  dayNumber:string='';
 
   cityList: string[]=['Delhi', 'Mumbai', 'Jaipur', 'Raipur'];
   fruitList: string[]=['Apple', 'Mango', 'Guava', 'Pomegranate', 'Watermelon'];

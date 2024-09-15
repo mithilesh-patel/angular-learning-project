@@ -29,4 +29,28 @@
       } 
     </select>
   </div>
+
+  <div class="col-3">
+    Enter the number of day: <input type="text" [(ngModel)]="dayNumber">
+
+    @switch (dayNumber) {
+        @case('1'){
+            <p>Monday</p>
+        }@case('2'){
+            <p>Tuesday</p>
+        }@case('3'){
+            <p>Wednesday</p>
+        }@case('4'){
+            <p>Thursday</p>
+        }@case('5'){
+            <p>Friday</p>
+        }@case('6'){
+            <p>Saturday</p>
+        }@case('7'){
+            <p>Sunday</p>
+        }@default {
+            <p>Wrong Entry</p>
+        }
+    }
+  </div>
 </div>
