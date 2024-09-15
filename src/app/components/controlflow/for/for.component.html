@@ -1,1 +1,32 @@
 <h1>for works!</h1>
+
+<div class="row">
+  <div class="col-3">
+    <ul>
+      @for (city of cityList; track $index) {
+
+      <li>{{ city }}</li>
+      }@empty {
+      <li>There are no items.</li>
+      }
+    </ul>
+  </div>
+
+  <div class="col-3">
+    @for (stud of studList; track $index) {
+
+    <div>
+      {{ stud.name }}
+    </div>
+    }
+  </div>
+
+  <div class="col-3">
+    Select the fruit.
+    <select name="fruits" id="fruits">
+      @for (fruit of fruitList; track $index) {
+      <option value="{{ fruit }}">{{ fruit }}</option>
+      } 
+    </select>
+  </div>
+</div>
