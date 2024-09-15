@@ -13,10 +13,10 @@
   </div>
 
   <div class="col-3">
-    @for (stud of studList; track $index) {
+    @for (fruit of fruitList; track $index) {
 
     <div>
-      {{ stud.name }}
+      {{ fruit }}
     </div>
     }
   </div>
@@ -24,8 +24,8 @@
   <div class="col-3">
     Select the fruit.
     <select name="fruits" id="fruits">
-      @for (fruit of fruitList; track $index) {
-      <option value="{{ fruit }}">{{ fruit }}</option>
+      @for (stud of studList; track $index) {
+      <option [value]="stud.id">{{ stud.name }}</option>
       } 
     </select>
   </div>
