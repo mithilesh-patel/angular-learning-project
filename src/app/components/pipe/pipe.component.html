@@ -1,7 +1,7 @@
 <h1>Pipe in Angular</h1>
 
 <div class="row pt-3">
-  <div class="col-3">
+  <div class=" section col-3">
     <div class="p-3 text-center">
       <h3>Uppercase Pipe</h3>
       <p>Before Pipe: <span>{{fruit1}}</span></p>
@@ -9,30 +9,63 @@
     </div>
   </div>
 
-  <div class="col-3">
+  <div class=" section col-3">
     <div class="p-3 text-center">
-      <h3>Pipe</h3>
+      <h3>Lowercase Pipe</h3>
       <p>Before Pipe: <span>{{fruit2}}</span></p>
       <p>After Pipe: <span>{{fruit2 | lowercase}}</span></p>
     </div>
   </div>
 
-  <div class="col-3">
+  <div class=" section col-3">
     <div class="p-3 text-center">
-      <h3>Pipe</h3>
-      <p>Before Pipe: <span></span></p>
-      <p>After Pipe: <span></span></p>
+      <h3>Currency pipe</h3>
+      <p>Before Pipe: <span>{{amount}}</span></p>
+      <p>After Pipe: <span>{{amount | currency}}</span></p>
     </div>
   </div>
 
-  <div class="col-3">
+  <div class=" section col-3">
     <div class="p-3 text-center">
-      <h3>Pipe</h3>
-      <p>Before Pipe: <span></span></p>
-      <p>After Pipe: <span></span></p>
+      <h3>Titlecase Pipe</h3>
+      <p>Before Pipe: <span>{{company}}</span></p>
+      <p>After Pipe: <span>{{company | titlecase}}</span></p>
     </div>
   </div>
-
-
 </div>
-
+<hr>
+<div class="row pt-3">
+    <div class=" section col-3">
+      <div class="p-3 text-center">
+        <h3>Date Pipe</h3>
+        <p>Before Pipe: <span>{{purchasedOn}}</span></p>
+        <!-- Combining multiple pipes -->
+        <p>After Pipe: <span>{{purchasedOn | date | uppercase}}</span></p>
+      </div>
+    </div>
+  
+    <div class=" section col-3">
+      <div class="p-3 text-center">
+        <h3>JSON Stringify Pipe</h3>
+        <p>Before Pipe: <span>{{jsonObj}}</span></p>
+        <p>After Pipe: <span>{{jsonObj | json}}</span></p>
+      </div>
+    </div>
+  
+    <div class=" section col-3">
+      <div class="p-3 text-center">
+        <h3>Currency pipe</h3>
+        <p>Before Pipe: <span>{{amount}}</span></p>
+        <p>After Pipe: <span>{{amount | currency}}</span></p>
+      </div>
+    </div>
+  
+    <div class=" section col-3">
+      <div class="p-3 text-center">
+        <h3>Titlecase Pipe</h3>
+        <p>Before Pipe: <span>{{company}}</span></p>
+        <p>After Pipe: <span>{{company | titlecase}}</span></p>
+      </div>
+    </div>
+  </div>
+  
