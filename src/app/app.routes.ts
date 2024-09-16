@@ -9,6 +9,7 @@ import { IfelseComponent } from './components/controlflow/ifelse/ifelse.componen
 import { ForComponent } from './components/controlflow/for/for.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { PipeComponent } from './components/pipe/pipe.component';
+import { TemplateComponent } from './components/forms/template/template.component';
 
 export const routes: Routes = [
   //This is a route object 
@@ -51,5 +52,9 @@ export const routes: Routes = [
   {
     path: 'pipe-component',
     component: PipeComponent,
+  },
+  {
+    path: 'formtemplate-component',
+    component: TemplateComponent,
   },
 ];
