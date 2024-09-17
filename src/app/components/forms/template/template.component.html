@@ -5,17 +5,20 @@
     <form class="row g-3 needs-validation" novalidate>
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">First name</label>
-          <input type="text" class="form-control" id="validationCustom01" name="firstName"  [(ngModel)]="studentObj.firstName" required>
-          <div class="valid-feedback">
-            Looks good!
+          <input type="text" class="form-control" #fname="ngModel" id="validationCustom01" name="firstName"  [(ngModel)]="studentObj.firstName" required minlength="3">
+          <div class="text-danger">
+            @if(fname.errors?.['required']){
+              
+              <p>This is a required field.</p>
+            }@else if(fname.errors?.['minlength']){
+              <p>At least 3 characters required</p>
+
+            }
           </div>
         </div>
         <div class="col-md-4">
           <label for="validationCustom02" class="form-label">Last name</label>
           <input type="text" class="form-control" id="validationCustom02" name="lastName" [(ngModel)]="studentObj.lastName" required>
-          <div class="valid-feedback">  
-            Looks good!
-          </div>
         </div>
         <div class="col-md-4">
           <label for="validationCustomUsername" class="form-label">Username</label>
