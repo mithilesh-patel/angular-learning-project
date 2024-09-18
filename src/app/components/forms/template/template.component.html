@@ -5,13 +5,16 @@
     <form class="row g-3 needs-validation" novalidate>
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">First name</label>
-          <input type="text" class="form-control" #fname="ngModel" id="validationCustom01" name="firstName"  [(ngModel)]="studentObj.firstName" required minlength="3">
+          <input type="text" class="form-control" #fname="ngModel" id="validationCustom01" name="firstName"  [(ngModel)]="studentObj.firstName" required minlength="3" maxlength="6">
           <div class="text-danger">
             @if(fname.errors?.['required']){
               
               <p>This is a required field.</p>
             }@else if(fname.errors?.['minlength']){
               <p>At least 3 characters required</p>
+
+            }@else if(fname.errors?.['maxlength']){
+              <p>At most 6 characters required</p>
 
             }
           </div>
