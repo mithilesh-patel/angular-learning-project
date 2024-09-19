@@ -2,17 +2,17 @@
     <h1>Template Form</h1>
 </div>
 <div class="">
-    <form class="row g-3 needs-validation">
+    <form class="row g-3" #form="ngForm">
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">First name</label>
           <input type="text" class="form-control" #fname="ngModel" id="validationCustom01" name="firstName"  [(ngModel)]="studentObj.firstName" required minlength="3" maxlength="6">
           <div class="text-danger">
-            @if( fname.touched && fname.errors?.['required']){
+            @if( (fname.touched || fname.dirty) && fname.errors?.['required']){
               <p>This is a required field.</p>
-            }@else if(fname.errors?.['minlength']){
+            }@else if((fname.touched || fname.dirty) && fname.errors?.['minlength']){
               <p>At least 3 characters required</p>
 
-            }@else if(fname.errors?.['maxlength']){
+            }@else if((fname.touched || fname.dirty) && fname.errors?.['maxlength']){
               <p>At most 6 characters required</p>
 
             }
@@ -71,6 +71,7 @@
           </div>
         </div>
         <div class="col-12">
+          {{form.invalid}}
           <button class="btn btn-primary" type="submit" (click)="submitForm()">Submit form</button>
         </div>
         <div>{{formValue| json}}</div>
