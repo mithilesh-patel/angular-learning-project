@@ -2,13 +2,12 @@
     <h1>Template Form</h1>
 </div>
 <div class="">
-    <form class="row g-3 needs-validation" novalidate>
+    <form class="row g-3 needs-validation">
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">First name</label>
           <input type="text" class="form-control" #fname="ngModel" id="validationCustom01" name="firstName"  [(ngModel)]="studentObj.firstName" required minlength="3" maxlength="6">
           <div class="text-danger">
-            @if(fname.errors?.['required']){
-              
+            @if( fname.touched && fname.errors?.['required']){
               <p>This is a required field.</p>
             }@else if(fname.errors?.['minlength']){
               <p>At least 3 characters required</p>
