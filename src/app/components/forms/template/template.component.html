@@ -5,7 +5,7 @@
     <form class="row g-3" #form="ngForm">
         <div class="col-md-4">
           <label for="validationCustom01" class="form-label">First name</label>
-          <input type="text" class="form-control" #fname="ngModel" id="validationCustom01" name="firstName"  [(ngModel)]="studentObj.firstName" required minlength="3" maxlength="6">
+          <input type="text" class="form-control" #fname="ngModel" id="validationCustom01" name="firstName"  [(ngModel)]="studentObj.firstName" required minlength="3" maxlength="15">
           <div class="text-danger">
             @if( (fname.touched || fname.dirty) && fname.errors?.['required']){
               <p>This is a required field.</p>
@@ -14,19 +14,38 @@
 
             }@else if((fname.touched || fname.dirty) && fname.errors?.['maxlength']){
               <p>At most 6 characters required</p>
-
             }
           </div>
         </div>
         <div class="col-md-4">
           <label for="validationCustom02" class="form-label">Last name</label>
-          <input type="text" class="form-control" id="validationCustom02" name="lastName" [(ngModel)]="studentObj.lastName" required>
+          <input type="text" class="form-control" #lastName="ngModel"  id="validationCustom02" name="lastName" [(ngModel)]="studentObj.lastName" required minlength="3" maxlength="15">
+          <div class="text-danger">
+            @if( (lastName.touched || lastName.dirty) && lastName.errors?.['required']){
+              <p>This is a required field.</p>
+            }@else if((lastName.touched || lastName.dirty) && lastName.errors?.['minlength']){
+              <p>At least 3 characters required</p>
+
+            }@else if((lastName.touched || lastName.dirty) && lastName.errors?.['maxlength']){
+              <p>At most 6 characters required</p>
+            }
+          </div>
         </div>
         <div class="col-md-4">
           <label for="validationCustomUsername" class="form-label">Username</label>
           <div class="input-group has-validation">
             <span class="input-group-text" id="inputGroupPrepend">&#64;</span>
-            <input type="text" class="form-control" id="validationCustomUsername" name="userName" [(ngModel)]="studentObj.userName" aria-describedby="inputGroupPrepend" required>
+            <input type="text" class="form-control" #userName="ngModel"  id="validationCustomUsername" name="userName" [(ngModel)]="studentObj.userName" aria-describedby="inputGroupPrepend" required minlength="3" maxlength="15">
+            <div class="text-danger">
+              @if( (userName.touched || userName.dirty) && userName.errors?.['required']){
+                <p>This is a required field.</p>
+              }@else if((userName.touched || userName.dirty) && userName.errors?.['minlength']){
+                <p>At least 3 characters required</p>
+  
+              }@else if((userName.touched || userName.dirty) && userName.errors?.['maxlength']){
+                <p>At most 6 characters required</p>
+              }
+            </div>
             <div class="invalid-feedback">
               Please choose a username.
             </div>
@@ -34,34 +53,52 @@
         </div>
         <div class="col-md-6">
           <label for="validationCustom03" class="form-label">City</label>
-          <input type="text" class="form-control" id="validationCustom03" name="city" [(ngModel)]="studentObj.city" required>
+          <input type="text" class="form-control" #city="ngModel"  id="validationCustom03" name="city" [(ngModel)]="studentObj.city" required minlength="3" maxlength="15">
+          <div class="text-danger">
+            @if( (city.touched || city.dirty) && city.errors?.['required']){
+              <p>This is a required field.</p>
+            }@else if((city.touched || city.dirty) && city.errors?.['minlength']){
+              <p>At least 3 characters required</p>
+
+            }@else if((city.touched || city.dirty) && city.errors?.['maxlength']){
+              <p>At most 6 characters required</p>
+            }
+          </div>
           <div class="invalid-feedback">
             Please provide a valid city.
           </div>
         </div>
         <div class="col-md-3">
           <label for="validationCustom04" class="form-label">State</label>
-          <select class="form-select" id="validationCustom04" name="state" [(ngModel)]="studentObj.state" required>
+          <select class="form-select" #state="ngModel"  id="validationCustom04" name="state" [(ngModel)]="studentObj.state" required>
             <option selected disabled value="">Choose...</option>
             <option>Chhattisgarh</option>
             <option>Maharashtra</option>
             <option>Goa</option>
             <option>Karnataka</option>
           </select>
+
           <div class="invalid-feedback">
             Please select a valid state.
           </div>
         </div>
         <div class="col-md-3">
           <label for="validationCustom05" class="form-label">Zip</label>
-          <input type="text" class="form-control" id="validationCustom05" name="pincode" [(ngModel)]="studentObj.pincode" required>
-          <div class="invalid-feedback">
-            Please provide a valid zip.
+          <input type="text" class="form-control" #pincode="ngModel"  id="validationCustom05" name="pincode" [(ngModel)]="studentObj.pincode" required>
+          <div class="text-danger">
+            @if( (pincode.touched || pincode.dirty) && pincode.errors?.['required']){
+              <p>This is a required field.</p>
+            }@else if((pincode.touched || pincode.dirty) && pincode.errors?.['minlength']){
+              <p>At least 3 characters required</p>
+
+            }@else if((pincode.touched || pincode.dirty) && pincode.errors?.['maxlength']){
+              <p>At most 6 characters required</p>
+            }
           </div>
         </div>
         <div class="col-12">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" name="isCheckboxchecked" [(ngModel)]="studentObj.isCheckboxchecked" id="invalidCheck" required>
+            <input class="form-check-input" type="checkbox" value="" #invalidCheck="ngModel" name="isCheckboxchecked" [(ngModel)]="studentObj.isCheckboxchecked" id="invalidCheck" required>
             <label class="form-check-label" for="invalidCheck">
               Agree to terms and conditions
             </label>
@@ -72,7 +109,7 @@
         </div>
         <div class="col-12">
           {{form.invalid}}
-          <button class="btn btn-primary" type="submit" (click)="submitForm()">Submit form</button>
+          <button class="btn btn-primary" type="submit"  [disabled]="form.invalid" (click)="submitForm()">Submit form</button>
         </div>
         <div>{{formValue| json}}</div>
       </form>
