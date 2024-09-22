@@ -7,14 +7,34 @@
           <label for="validationCustom01" class="form-label">First name</label>
           <input type="text" class="form-control" #fname="ngModel" id="validationCustom01" name="firstName"  [(ngModel)]="studentObj.firstName" required minlength="3" maxlength="15">
           <div class="text-danger">
-            @if( (fname.touched || fname.dirty) && fname.errors?.['required']){
+            <!-- @if( (fname.touched || fname.dirty) && fname.errors?.['required']){
               <p>This is a required field.</p>
             }@else if((fname.touched || fname.dirty) && fname.errors?.['minlength']){
               <p>At least 3 characters required</p>
 
             }@else if((fname.touched || fname.dirty) && fname.errors?.['maxlength']){
               <p>At most 6 characters required</p>
-            }
+            } -->
+
+            @if(fname.pristine){
+
+              <p>Field is pristine (not modified).</p>
+            }@else if (fname.dirty) {
+       
+              <p>Field is dirty (modified).</p>
+            }@else if (fname.touched) {
+       
+             <p>Field is touched (focused on and blurred).</p>
+           }@else if (fname.untouched) {
+       
+             <p>Field is untouched (not focused yet).</p>
+           }@else if (fname.valid) {
+       
+             <p>Field is valid</p>
+           }@else if (fname.invalid) {
+       
+             <p>Field is invalid.</p>
+           }
           </div>
         </div>
         <div class="col-md-4">
