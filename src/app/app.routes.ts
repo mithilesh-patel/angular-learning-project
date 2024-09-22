@@ -10,6 +10,7 @@ import { ForComponent } from './components/controlflow/for/for.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { TemplateComponent } from './components/forms/template/template.component';
+import { ReactiveComponent } from './components/forms/reactive/reactive.component';
 
 export const routes: Routes = [
   //This is a route object 
@@ -56,5 +57,9 @@ export const routes: Routes = [
   {
     path: 'formtemplate-component',
     component: TemplateComponent,
+  },
+  {
+    path: 'formreactive-component',
+    component: ReactiveComponent,
   },
 ];
