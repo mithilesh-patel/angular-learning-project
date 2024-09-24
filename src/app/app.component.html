@@ -44,25 +44,29 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="attribute-dir">Attribute Directive</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="for-component">For</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="ifelse-component">IfElse</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="switch-component">Switch</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Control flow
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="nav-link active text-dark" aria-current="page" routerLink="for-component">For</a></li>
+              <li><a class="nav-link active text-dark" aria-current="page" routerLink="ifelse-component">IfElse</a></li>
+              <li><a class="nav-link active text-dark" aria-current="page" routerLink="switch-component">Switch</a></li>
+            </ul>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="pipe-component">Pipe</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="formtemplate-component">Template Form</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="formreactive-component">Reactive Form</a>
-          </li>
 
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Forms
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="nav-link active text-dark" aria-current="page" routerLink="formtemplate-component">Template form</a></li>
+              <li><a class="nav-link active text-dark" aria-current="page" routerLink="formreactive-component">Reactive form</a></li>
+            </ul>
+          </li>
       </ul>
       <form class="d-flex" role="search">
         <input
@@ -79,3 +83,4 @@
 <div class="container">
     <router-outlet></router-outlet>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
