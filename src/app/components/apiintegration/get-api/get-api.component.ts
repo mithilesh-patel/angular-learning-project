@@ -11,6 +11,7 @@ import { Component } from '@angular/core';
 export class GetApiComponent {
 
   userList:any []=[];
+  postList:any []=[];
 
   constructor (private http: HttpClient){
     this.getAllUser();
@@ -21,6 +22,15 @@ export class GetApiComponent {
     console.log(res); // Process the response here
 
     this.userList= res
+    });
+  }
+
+
+  getAllPosts() {
+    this.http.get("https://jsonplaceholder.typicode.com/posts").subscribe((res: any) => {
+    console.log(res); // Process the response here
+
+    this.postList= res
     });
   }
 }

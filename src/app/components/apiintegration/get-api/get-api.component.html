@@ -1,12 +1,25 @@
 <div class="row">
     <div class="col-3">
-        <button class="btn btn-success" (click)="getAllUser()"> Click Me </button>
+        <button class="btn btn-success m-4" (click)="getAllUser()"> Click Me </button>
     </div>
     <div class="col-3">
-        <select name="" id="">
+        <select class="m-4" name="" id="">
             @for (item of userList ; track $index) {
                 <option value="{{item.email}}">{{item.name}}</option>
             }
         </select>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success m-4" (click)="getAllPosts()">  Show all Posts</button>
+    </div>
+    <div class="">
+        @for (item of postList; track $index) {
+            <div class="">
+                <h2>{{item.id}}. {{item.title}}</h2>
+                <p>{{item.body}}</p>
+            </div>
+        }
     </div>
 </div>
