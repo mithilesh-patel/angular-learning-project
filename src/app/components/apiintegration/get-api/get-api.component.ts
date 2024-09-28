@@ -27,10 +27,13 @@ export class GetApiComponent {
 
 
   getAllPosts() {
-    this.http.get("https://jsonplaceholder.typicode.com/posts").subscribe((res: any) => {
+    this.http.get("https://jsonplaceholder.typicode.com/postsefesf").subscribe((res: any) => {
     console.log(res); // Process the response here
 
     this.postList= res
+    }, error=>{
+      debugger
+      console.log("Hi this is in error block")
     });
   }
 }
