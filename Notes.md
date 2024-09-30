@@ -71,3 +71,5 @@ Structural directives are essential in building dynamic and responsive user inte
 # 3 SPA (Single Page Application)
 
 # 4 REST API Notes
+
+# 5 REST API POST Notes
