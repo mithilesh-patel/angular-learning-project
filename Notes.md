@@ -75,3 +75,5 @@ Structural directives are essential in building dynamic and responsive user inte
 # 5 REST API POST Notes
 
 # 6 REST API POST
+
+# 7 REST API Update
